@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MOON</title>
+       
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">방탄소년단</a>
+            <ul>
+                <li><a href="#" class="active">Song</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Group</a></li>
+                <li><a href="#">Video clip</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Moon</h2>
+            <a href="#sec" id="btn">down</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+
+            <h2>Text of song</h2>
+
+            <p>달과 지구는 언제부터</p>
+            <p>이렇게 함께했던 건지</p>
+            <p>존재로도 빛나는 너</p>
+            <p>그 곁을 나 지켜도 될지</p>
+
+            <br>
+
+            <p>너는 나의 지구 네게 난 just a moon</p>
+            <p>네 맘을 밝혀주는 너의 작은 별</p>
+            <p>너는 나의 지구 and all I see is you</p>
+            <p>이렇게 그저 널 바라볼 뿐인 걸</p>
+
+            <br>
+
+            <p>모두들 내가 아름답다 하지만</p>
+            <p>내 바다는 온통 까만 걸</p>
+            <p>꽃들이 피고 하늘이 새파란 별</p>
+            <p>정말 아름다운 건 너야</p>
+
+            <br>
+
+            <p>문득 생각해 너도 날 지금 보고 있을까</p>
+            <p>내 아픈 상처까지 네게 다 들키진 않을까</p>
+            <p>네 주위를 맴돌게 네 곁에 있어 줄게</p>
+            <p>네 빛이 되어 줄게 all for you</p>
+
+            <br>
+
+            <p>난 이름조차 없었어</p>
+            <p>내가 널 만나기 전까진</p>
+            <p>넌 내게 사랑을 줬고</p>
+            <p>이제는 내 이유가 됐어</p>
+
+            <br>
+
+            <p>너는 나의 지구 네게 난 just a moon</p>
+            <p>네 맘을 밝혀주는 너의 작은 별</p>
+            <p>너는 나의 지구 and all I see is you</p>
+            <p>이렇게 그저 널 바라볼 뿐인 걸</p>
+
+            <br>
+
+            <p>In the crescent moon night</p>
+            <p>두 눈을 감아도 넌 파랗게 내게 밀려와</p>
+            <p>In the full moon night</p>
+            <p>두 눈을 뜨고서 널 담아도 괜찮은 걸까</p>
+
+            <br>
+
+            <p>문득 생각해 너도 날 지금 보고 있을까</p>
+            <p>내 아픈 상처까지 네게 다 들키진 않을까</p>
+            <p>네 주위를 맴돌게 네 곁에 있어 줄게</p>
+            <p>네 빛이 되어 줄게 all for you</p>
+            
+            <br>
+
+            <p>환한 낮에도 까만 밤에도</p>
+            <p>내 곁을 지켜주는 너</p>
+            <p>슬플 때에도 아플 때에도</p>
+            <p>그저 날 비추는 너</p>
+
+            <br>
+
+            <p>어떤 말보다 고맙단 말보다</p>
+            <p>난 너의 곁에 있을게</p>
+            <p>캄캄한 밤에 훨씬 더 환하게</p>
+            <p>너의 곁을 지킬게</p>
+
+            <br>
+
+            <p>문득 생각해 너는 널 정말 알고 있을까</p>
+            <p>네 존재가 얼마나 예쁜지 너 알고 있을까</p>
+            <p>네 주위를 맴돌게 네 곁에 있어 줄게</p>
+            <p>네 빛이 되어 줄게 all for you</p>
+
+        </div>
+
+        <script> 
+            let stars = document.getElementById('stars')
+            let moon = document.getElementById('moon')
+            let mountains_behind = document.getElementById('mountains_behind')
+            let text = document.getElementById('text')
+            let btn = document.getElementById('btn')
+            let mountains_front = document.getElementById('mountains_front')
+            let header = document.querySelector('header');
+
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>
